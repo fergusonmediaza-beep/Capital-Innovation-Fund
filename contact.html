@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us</title>
+
+<style>
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* COLORS */
+:root {
+  --blue: #00273d;
+  --white: #ffffff;
+  --grey: #f4f4f4;
+  --text-dark: #1a1a1a;
+}
+
+/* RESET */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: var(--white);
+  background: var(--blue);
+}
+
+/* NAVBAR */
+nav {
+  width: 100%;
+  background: var(--blue);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+nav .logo img {
+  height: 45px;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Nav links — desktop */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* CONTACT PAGE LAYOUT */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding: 60px 10%;
+}
+
+.contact-left h1 {
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+.contact-right h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.contact-right p {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.social-area {
+  margin-top: 40px;
+}
+
+.social-area h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.social-icons img {
+  width: 32px;
+  margin-right: 15px;
+}
+
+/* Button */
+.signup-btn a {
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 25px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.signup-btn a:hover {
+  background: white;
+  color: #002e3b;
+}
+
+/* FOOTER */
+footer {
+  background: var(--white);
+  color: var(--blue);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer img {
+  height: 50px;
+}
+
+footer .social {
+  display: flex;
+  gap: 15px;
+}
+
+footer .social img {
+  height: 25px;
+}
+
+/* === MOBILE RESPONSIVE (≤768px) === */
+@media (max-width: 768px) {
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide nav links by default */
+  nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--blue);
+    width: 100%;
+    flex-direction: column;
+    padding: 15px 0;
+    margin: 0;
+    gap: 0;
+    display: none !important; /* critical override */
+    z-index: 100;
+  }
+
+  /* Show when toggled */
+  nav ul.show {
+    display: flex !important;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    display: block;
+  }
+
+  /* Hamburger animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Layout adjustments */
+  .contact-container {
+    grid-template-columns: 1fr;
+    padding: 40px 5%;
+  }
+
+  .contact-left h1 {
+    font-size: 36px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo">
+    <img src="logo1.png" alt="Logo">
+  </div>
+
+  <!-- Hamburger Button -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Nav Links -->
+  <ul id="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sectors.html">Sectors</a></li>
+    <li><a href="solutions.html">Solutions</a></li>
+    <li><a href="contact.html" style="opacity: 0.7;">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- CONTACT CONTENT -->
+<div class="contact-container">
+  <!-- LEFT SIDE -->
+  <div class="contact-left">
+    <h1>Contact Us</h1>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="contact-right">
+    <h3>Mail Address</h3>
+    <p>3rd Floor, 7 West Quay Road, Waterfront, Cape Town Office</p>
+
+    <h3>Phone Number</h3>
+    <p>+27 11 084 1100</p>
+
+    <h3>E-mail</h3>
+    <p>info@gmail.com</p>
+
+    <div class="signup-btn">
+      <a href="#">Sign up today! →</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <img src="logo.png" alt="Footer Logo">
+  <div class="social">
+    <img src="social.png" alt="Social Media">
+  </div>
+</footer>
+
+<!-- Hamburger Toggle Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.classList.toggle('active');
+    });
+
+    // Close menu when a nav link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        hamburger.classList.remove('active');
+      });
+    });
+  }
+});
+
+
+
+</script>
+
+</body>
+</html>

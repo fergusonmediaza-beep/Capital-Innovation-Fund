@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Capital Innovation Fund</title>
+
+<style>
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* COLORS */
+:root {
+  --blue: #00273d;
+  --white: #ffffff;
+  --grey: #f4f4f4;
+  --text-dark: #1a1a1a;
+}
+
+/* RESET */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text-dark);
+}
+
+/* NAVBAR */
+nav {
+  width: 100%;
+  background: var(--blue);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+nav .logo img {
+  height: 45px;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Nav links — desktop */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* ABOUT – TOP SECTION */
+.about-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+.about-top img {
+  flex: 1;
+  width: 50%;
+  min-width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+  background: var(--blue);
+  color: white;
+  padding: 60px;
+  min-width: 300px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* MISSION + VISION */
+.mv-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 30px;
+  background: var(--white);
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.mv-box {
+  width: 45%;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.mv-box h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+/* CORE VALUES */
+.core-values {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.core-values h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cv-items {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.cv-item {
+  width: 220px;
+}
+
+.cv-item img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cv-item h3 {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* TEAM SECTION */
+.team-section {
+  background: var(--blue);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.team-members img {
+  width: 260px;
+  height: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+
+
+/* ==== BACK TO TOP BUTTON ==== */
+#backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    background-color: #1b3350;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover,
+#backToTop:focus {
+    background-color:  #2e4453;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+#backToTop:active {
+    transform: translateY(0);
+}
+
+#backToTop svg {
+    display: block;
+    margin: auto;
+}
+
+/* FOOTER */
+footer {
+  background: var(--white);
+  color: var(--blue);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer img {
+  height: 50px;
+}
+
+footer .social {
+  display: flex;
+  gap: 15px;
+}
+
+footer .social img {
+  height: 25px;
+}
+
+/* === MOBILE RESPONSIVE (≤768px) === */
+@media (max-width: 768px) {
+  /* Show hamburger, hide desktop nav */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide nav list by default */
+  nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--blue);
+    width: 100%;
+    flex-direction: column;
+    padding: 15px 0;
+    margin: 0;
+    gap: 0;
+    display: none !important; /* critical override */
+    z-index: 100;
+  }
+
+  /* Show when toggled */
+  nav ul.show {
+    display: flex !important;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    display: block;
+  }
+
+  /* Optional: animate hamburger icon */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Layout adjustments */
+  .about-text {
+    padding: 40px 20px;
+  }
+
+  .mv-box {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">
+    <img src="logo1.png" alt="Logo">
+  </div>
+
+  <!-- Hamburger Button -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Nav Links -->
+  <ul id="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html" style="opacity: 0.7;">About</a></li>
+    <li><a href="sectors.html">Sectors</a></li>
+    <li><a href="solutions.html">Solutions</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ABOUT INTRO -->
+<section class="about-top">
+  <img src="bridge.png" alt="Bridge Image">
+  
+  <div class="about-text">
+    <h1>About Us</h1>
+    <p>
+      The Capital Innovation Fund brings together technology and capital to unlock Africa’s next
+      wave of infrastructure growth. Our digital platform tracks projects end-to-end using IoT
+      sensors, geospatial data, drones, and AI analytics.
+    </p>
+    <p>
+      By turning traditionally opaque infrastructure into transparent, investable assets, we help
+      accelerate delivery across Energy, Water, Gas, Logistics, and Agriculture sectors.
+    </p>
+  </div>
+</section>
+
+<!-- MISSION + VISION -->
+<section class="mv-section">
+  <div class="mv-box">
+    <h2>Mission</h2>
+    <p>To drive sustainable and transparent infrastructure development through technology, creating long-term value for investors and African communities.</p>
+  </div>
+
+  <div class="mv-box">
+    <h2>Vision</h2>
+    <p>To be the leading catalyst for Africa’s digital infrastructure transformation, ensuring a more efficient, resilient, and transparent future.</p>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="core-values">
+  <h2>Core Values</h2>
+  <p>Our success is measured by the positive impact our projects create across Africa.</p>
+
+  <div class="cv-items">
+    <div class="cv-item">
+      <img src="innovation.png" alt="Innovation">
+      <h3>Innovation</h3>
+      <p>We embrace technology that drives meaningful change.</p>
+    </div>
+    <div class="cv-item">
+      <img src="transparency.png" alt="Transparency">
+      <h3>Transparency</h3>
+      <p>We provide full visibility to build trust and accountability.</p>
+    </div>
+    <div class="cv-item">
+      <img src="sustainability.png" alt="Sustainability">
+      <h3>Sustainability</h3>
+      <p>We design long-term economic and environmental impact.</p>
+    </div>
+    <div class="cv-item">
+      <img src="partnership.png" alt="Partnership">
+      <h3>Partnership</h3>
+      <p>We build strong collaborative relationships across Africa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section">
+  <h2>Our Team</h2>
+  <div class="team-members">
+    <img src="team1.jpg" alt="Team Member 1">
+    <img src="team2.jpg" alt="Team Member 2">
+    <img src="team3.jpg" alt="Team Member 3">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="logo.png" alt="Footer Logo">
+  <div class="social">
+    <img src="social.png" alt="Social Media">
+  </div>
+</footer>
+
+<!-- Hamburger Toggle Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      hamburger.classList.toggle('active');
+    });
+
+    // Optional: Close menu when a link is clicked (better mobile UX)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        hamburger.classList.remove('active');
+      });
+    });
+  }
+});
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('backToTop');
+
+    // Show button after scrolling down 400px
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    });
+
+    // Smooth scroll to top when clicked
+    btn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+</script>
+
+
+
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+</button>
+</body>
+</html>

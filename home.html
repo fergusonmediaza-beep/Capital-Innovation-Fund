@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Innovation Fund</title>
+
+<style>
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text-dark);
+}
+
+/* COLORS */
+:root {
+  --blue: #00273d;
+  --white: #ffffff;
+  --grey: #f4f4f4;
+  --text-dark: #1a1a1a;
+}
+
+/* NAVBAR */
+nav {
+  width: 100%;
+  background: var(--blue);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 100;
+}
+
+nav .logo img {
+  height: 45px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  justify-content: space-between;
+  z-index: 101;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Nav links — desktop */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* HERO */
+.hero {
+  height: 95vh;
+  background: url("hero.png") center center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 55px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.hero p {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.hero .btns {
+  margin-top: 25px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 25px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: white;
+  color: var(--blue);
+}
+
+/* WHY IT MATTERS */
+.why {
+  background: var(--blue);
+  color: var(--white);
+  display: flex;
+  gap: 40px;
+  padding: 50px;
+  align-items: center;
+}
+
+.why img {
+  width: 45%;
+  border-radius: 5px;
+}
+
+.why h2 {
+  font-size: 32px;
+}
+
+.why p {
+  margin-top: 10px;
+  width: 80%;
+  line-height: 1.5;
+}
+
+/* SOLUTIONS */
+.solutions {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.solutions h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.solutions p {
+  width: 70%;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.solutions .items {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.solutions .item {
+  width: 180px;
+  margin-bottom: 20px;
+}
+
+.solutions .item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.solutions .item p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+
+
+
+/* ==== BACK TO TOP BUTTON ==== */
+#backToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    background-color: #1b3350;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover,
+#backToTop:focus {
+    background-color:  #00273d;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+#backToTop:active {
+    transform: translateY(0);
+}
+
+#backToTop svg {
+    display: block;
+    margin: auto;
+}
+/* FOOTER */
+footer {
+  background: var(--white);
+  color: var(--blue);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer img {
+  height: 50px;
+}
+
+footer .social {
+  display: flex;
+  gap: 15px;
+}
+
+footer .social img {
+  height: 25px;
+}
+
+/* === MOBILE RESPONSIVE (≤768px) === */
+@media (max-width: 768px) {
+  /* Show hamburger, hide desktop nav */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide nav list by default */
+  nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--blue);
+    width: 100%;
+    flex-direction: column;
+    padding: 15px 0;
+    margin: 0;
+    gap: 0;
+    display: none !important; /* critical override */
+    z-index: 99;
+  }
+
+  /* Show when toggled */
+  nav ul.show {
+    display: flex !important;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    display: block;
+  }
+
+  /* Smaller buttons */
+  .btn {
+    padding: 7px 16px;
+    font-size: 12px;
+  }
+
+  /* Hero */
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  /* Why section */
+  .why {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .why img {
+    width: 100%;
+  }
+
+  .why div {
+    text-align: center;
+  }
+
+  .why p {
+    text-align: center;
+    max-width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+  /* Solutions */
+  .solutions {
+    padding: 40px 15px;
+  }
+
+  .solutions p {
+    width: 100%;
+  }
+
+  .solutions .items {
+    gap: 15px;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo">
+    <img src="logo1.png" alt="Capital Innovation Fund Logo">
+  </div>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul id="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="sectors.html">Sectors</a></li>
+    <li><a href="solutions.html">Solutions</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Capital Innovation Fund</h1>
+    <p>BRIDGING TECHNOLOGY AND CAPITAL FOR AFRICA'S INFRASTRUCTURE GROWTH</p>
+    <div class="btns">
+      <a href="solutions.html" class="btn">Explore Solutions</a>
+      <a href="contact.html" class="btn">Partner with us</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="solutions">
+  <h2>Our Solutions</h2>
+  <p>
+    The Capital Innovation Fund brings together technology and capital to unlock Africa’s next wave of infrastructure growth. We provide an integrated digital platform that tracks projects end-to-end, utilising IoT sensors, geospatial data, drones, and AI analytics, providing funders with verified, real-time insights from construction to operation. By turning traditionally opaque projects into transparent, investable assets we accelerate funding and improve delivery across Energy, Water, Gas, Logistics, and Agriculture sectors.
+  </p>
+
+  <div class="items">
+    <div class="item">
+      <img src="water.png" alt="Water">
+      <p>Water</p>
+    </div>
+    <div class="item">
+      <img src="energy.png" alt="Energy">
+      <p>Energy</p>
+    </div>
+    <div class="item">
+      <img src="logistics.png" alt="Logistics">
+      <p>Logistics</p>
+    </div>
+    <div class="item">
+      <img src="agriculture.png" alt="Agriculture">
+      <p>Agriculture</p>
+    </div>
+    <div class="item">
+      <img src="gas.png" alt="Gas">
+      <p>Gas</p>
+    </div>
+  </div>
+
+  <br><br>
+  <a class="btn" href="contact.html">Get In Touch</a>
+</section>
+
+<!-- WHY IT MATTERS -->
+<section class="why">
+  <img src="why.png" alt="Why It Matters">
+  <div>
+    <h2>Why it matters</h2>
+    <p>
+      Africa needs massive infrastructure investment. Verified, real-time visibility removes uncertainty 
+      and unlocks the capital projects need to start and scale.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="logo.png" alt="Footer Logo">
+  <div class="social">
+    <img src="social.png" alt="Instagram">
+  </div>
+</footer>
+
+<!-- JavaScript for Hamburger Toggle -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      navLinks.classList.toggle('show');
+      hamburger.classList.toggle('active');
+    });
+
+    // Optional: close menu when clicking a nav link (better UX on mobile)
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        hamburger.classList.remove('active');
+      });
+    });
+  }
+});
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('backToTop');
+
+    // Show button after scrolling down 400px
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    });
+
+    // Smooth scroll to top when clicked
+    btn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+</script>
+
+
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+</button>
+</body>
+</html>

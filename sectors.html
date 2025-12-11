@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Target Sectors - Capital Innovation Fund</title>
+<style>
+/* COLORS */
+:root {
+  --blue: #00273d;
+  --white: #ffffff;
+  --grey: #f4f4f4;
+  --text-dark: #1a1a1a;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  background: var(--white);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* NAVIGATION — desktop: logo left, links right */
+nav {
+  width: 100%;
+  background: var(--blue);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between; /* ← Logo left, rest right */
+  align-items: center;
+  position: relative;
+  z-index: 1000;
+}
+
+nav .logo img {
+  height: 45px;
+}
+
+/* Nav links — stay on the right (next to hamburger on desktop, but hamburger hidden) */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Hamburger — hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  height: 3px;
+  background: var(--white);
+  border-radius: 2px;
+}
+
+/* PAGE HEADER */
+.header {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.header p {
+  width: 60%;
+  margin: 10px auto;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* SECTORS GRID */
+.sector-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 40px 20px;
+}
+
+.sector-box {
+  background: var(--blue);
+  color: white;
+  width: 260px;
+  padding: 30px 25px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.sector-box h3 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.sector-box p {
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* FOOTER */
+footer {
+  background: var(--white);
+  color: var(--text-dark);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+}
+
+footer img {
+  height: 50px;
+}
+
+footer .social {
+  display: flex;
+  gap: 15px;
+}
+
+footer .social img {
+  height: 25px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  /* Show hamburger on mobile */
+  .hamburger {
+    display: flex;
+    touch-action: manipulation;
+  }
+
+  /* Hide desktop nav, show dropdown */
+  nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--blue);
+    width: 100%;
+    flex-direction: column;
+    padding: 15px 0;
+    margin: 0;
+    gap: 0;
+    display: none;
+    z-index: 999;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .header p { width: 90%; }
+  footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV: logo left, ul + hamburger grouped right -->
+<nav>
+  <div class="logo">
+    <img src="logo1.png" alt="Logo">
+  </div>
+
+  <!-- This group stays on the right -->
+  <div style="display: flex; gap: 20px; align-items: center;">
+    <ul id="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="sectors.html">Sectors</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
+
+<div class="header">
+  <h1>Target Sectors</h1>
+  <p>
+    The fund focuses on infrastructure projects with high potential for technological integration in the following key sectors:
+  </p>
+</div>
+
+<div class="sector-container">
+  <div class="sector-box">
+    <h3>Energy</h3>
+    <p>Renewable energy projects (solar, wind), smart grid technology, and power generation and distribution.</p>
+  </div>
+  <div class="sector-box">
+    <h3>Water</h3>
+    <p>Water treatment and sanitation systems, and smart water management technologies.</p>
+  </div>
+  <div class="sector-box">
+    <h3>Gas</h3>
+    <p>Natural gas infrastructure, pipelines, and distribution networks.</p>
+  </div>
+  <div class="sector-box">
+    <h3>Logistics</h3>
+    <p>Supply chain infrastructure, smart ports, and tech-enabled transportation networks.</p>
+  </div>
+  <div class="sector-box">
+    <h3>Agriculture</h3>
+    <p>Agri-tech infrastructure, smart farming, and food logistics.</p>
+  </div>
+</div>
+
+<footer>
+  <img src="logo.png" alt="Footer Logo">
+  <div class="social">
+    <img src="social.png" alt="Instagram">
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const ham = document.getElementById('hamburger');
+  const nav = document.getElementById('nav-links');
+  if (ham && nav) {
+    ham.onclick = () => nav.classList.toggle('show');
+  }
+});
+</script>
+
+</body>
+</html>
