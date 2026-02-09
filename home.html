@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capital Innovation Fund - Infrastructure Intelligence Platform</title>
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="mainNav">
+  <div class="logo">
+    <img src="images/logo1.png" alt="Capital Innovation Fund">
+  </div>
+
+  <!-- Desktop Menu -->
+  <ul class="desktop-menu">
+    <li><a href="home.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="solutions.html">Solutions</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  
+  <!-- Mobile Menu Toggle -->
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+</nav>
+
+<!-- Mobile Sidebar -->
+<div class="mobile-sidebar">
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-content">
+    <button class="sidebar-close" aria-label="Close menu">&times;</button>
+    <ul class="sidebar-menu">
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- HERO SECTION - LIVE NETWORK CITY -->
+<section class="hero">
+
+  <video class="hero-background-video" autoplay muted loop playsinline>
+  <source src="images/hero2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+  
+  <!-- Animated Network Canvas Overlay -->
+  <div class="network-canvas-container">
+    <canvas id="networkCanvas"></canvas>
+  </div>
+  
+  <div class="hero-overlay"></div>
+  <div class="scanning-line"></div>
+
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span class="line">Infrastructure Intelligence</span>
+      <span class="line">For Africa's Growth</span>
+    </h1>
+    <p class="hero-subtitle">Real-time visibility. AI-powered insights. Investment-grade transparency.</p>
+
+    <div class="btns">
+      <a href="solutions.html" class="btn btn-primary">Explore Platform</a>
+      <a href="contact.html" class="btn btn-secondary">Partner With Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS SECTION - INTERACTIVE SECTOR SELECTOR -->
+<section class="solutions-interactive">
+  <div class="solutions-header">
+    <h2>Infrastructure Sectors</h2>
+    <p>Advanced monitoring and intelligence across critical infrastructure categories</p>
+  </div>
+
+  <div class="sector-selector">
+    <!-- Sector Tabs -->
+    <div class="sector-tabs">
+      <button class="sector-tab active" data-sector="water">
+        <span class="tab-label">Water</span>
+      </button>
+      <button class="sector-tab" data-sector="energy">
+        <span class="tab-label">Energy</span>
+      </button>
+      <button class="sector-tab" data-sector="logistics">
+        <span class="tab-label">Logistics</span>
+      </button>
+      <button class="sector-tab" data-sector="agriculture">
+        <span class="tab-label">Agriculture</span>
+      </button>
+      <button class="sector-tab" data-sector="gas">
+        <span class="tab-label">Gas</span>
+      </button>
+    </div>
+
+    <!-- Sector Content Display -->
+    <div class="sector-display">
+      <div class="sector-image">
+        <img id="sectorImage" src="images/water.png" alt="Water Infrastructure">
+        <div class="image-overlay"></div>
+      </div>
+
+      <div class="sector-description">
+        <h3 id="sectorTitle">Water Infrastructure</h3>
+        <p id="sectorText">Comprehensive monitoring of water distribution networks, treatment facilities, and irrigation systems across Africa. Our platform provides real-time visibility into water quality, flow rates, and infrastructure performance to ensure sustainable water management and attract investment in critical water projects.</p>
+        
+        <div class="sector-features">
+          <div class="feature-item">
+            <div class="feature-icon"></div>
+            <span>IoT Sensor Networks</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"></div>
+            <span>Real-time Monitoring</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"></div>
+            <span>Predictive Analytics</span>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"></div>
+            <span>Investment Reporting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT MATTERS - STORYTELLING TIMELINE -->
+<section class="why-timeline">
+  <h2 class="timeline-title">Why It Matters</h2>
+  <p class="timeline-subtitle">From fragmentation to intelligence-driven capital deployment</p>
+
+  <div class="timeline-container">
+    <!-- Africa Map Background (SVG embedded) -->
+    <div class="africa-map">
+      <svg class="map-svg" viewBox="0 0 800 800">
+        <path id="timelinePath" class="timeline-path" d="M 100 200 Q 400 150 700 200 Q 650 400 600 600 Q 400 650 200 600 Q 150 400 100 200" />
+        <path id="timelinePathFill" class="timeline-path-fill" d="M 100 200 Q 400 150 700 200 Q 650 400 600 600 Q 400 650 200 600 Q 150 400 100 200" />
+      </svg>
+    </div>
+
+    <!-- Timeline Steps -->
+    <div class="timeline-steps">
+      <div class="timeline-step" data-step="1">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <h3>Problem</h3>
+          <p>Fragmented infrastructure data creates uncertainty, delays funding, and increases risk for investors across Africa.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step" data-step="2">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          <h3>Visibility</h3>
+          <p>IoT sensors, satellite imagery, and drone monitoring provide real-time visibility into project status and performance.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step" data-step="3">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          <h3>Intelligence</h3>
+          <p>AI analytics transform raw data into actionable insights, risk scores, and investment recommendations.</p>
+        </div>
+      </div>
+
+      <div class="timeline-step" data-step="4">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          <h3>Capital Deployment</h3>
+          <p>Transparent, verified infrastructure becomes investable, accelerating funding and project delivery across sectors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Transform Infrastructure Investment</h2>
+    <p>Join the platform bringing transparency and intelligence to Africa's infrastructure growth</p>
+    <a href="contact.html" class="btn btn-primary">Get Started</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <img src="images/logo.png" alt="Capital Innovation Fund">
+    <div class="social">
+      <img src="images/social.png" alt="Social Media">
+    </div>
+  </div>
+</footer>
+
+<script src="js/home.js"></script>
+</body>
+</html>
