@@ -22,204 +22,378 @@
   </ul>
 </nav>
 
-<!-- ARCHITECTURE DIAGRAM SECTION -->
+<!-- FULLSCREEN HERO WITH ANIMATED BACKGROUND -->
+<section class="solutions-hero-immersive">
+  <div class="hero-background">
+    <div class="grid-overlay"></div>
+    <div class="particle-field">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+  </div>
+  
+  <div class="hero-content-center">
+    <div class="hero-badge">Infrastructure Intelligence Platform</div>
+    <h1>Where Capital Meets<br>Digital Intelligence</h1>
+    <p>Transforming African infrastructure through integrated funding and real-time operational oversight</p>
+    
+    <div class="hero-scroll-indicator">
+      <div class="scroll-arrow"></div>
+      <span>Explore Platform</span>
+    </div>
+  </div>
+</section>
+
+<!-- INTERACTIVE PIPELINE WITH HOVER REVEALS -->
 <section class="architecture-section">
-  <h2>Platform Architecture</h2>
-  <p class="section-subtitle">End-to-end infrastructure intelligence pipeline</p>
+  <h2>Intelligence Pipeline Architecture</h2>
+  <p class="section-subtitle">Five-stage transformation from raw infrastructure data to actionable investor intelligence</p>
   
-  <div class="pipeline-container">
-    <div class="pipeline-block" data-block="1">
-      <div class="block-icon"></div>
-      <h3>Sensors</h3>
-      <p>IoT devices, drones, satellite imagery</p>
+  <div class="pipeline-interactive">
+    <div class="pipeline-stage" data-stage="capture">
+      <div class="stage-number">01</div>
+      <div class="stage-icon"><img src="images/icons/sensors-icon.svg" alt=""></div>
+      <h3>Data Capture</h3>
+      <p class="stage-brief">IoT sensors, satellite imagery, SCADA systems</p>
+      
+      <div class="stage-details">
+        <div class="detail-section">
+          <h4>What it does</h4>
+          <p>Deploys distributed sensor networks, satellite monitoring systems, and SCADA integration across infrastructure assets to collect continuous operational data—including equipment performance, environmental conditions, resource consumption, and system health indicators.</p>
+        </div>
+        <div class="detail-section">
+          <h4>Why it matters</h4>
+          <p>Creates the foundational data infrastructure that eliminates blind spots in project operations. Without continuous capture, infrastructure operates on assumptions rather than verified conditions.</p>
+        </div>
+        <div class="detail-section highlight">
+          <h4>Investor value</h4>
+          <p>Establishes the evidence base for performance verification and early issue detection—reducing reliance on periodic manual reporting that often misses critical operational deterioration.</p>
+        </div>
+      </div>
     </div>
     
-    <div class="pipeline-connector">
-      <svg class="connector-line" viewBox="0 0 100 20">
-        <line class="connection-path" x1="0" y1="10" x2="100" y2="10" />
-        <line class="connection-animated" x1="0" y1="10" x2="100" y2="10" />
-      </svg>
-    </div>
-    
-    <div class="pipeline-block" data-block="2">
-      <div class="block-icon"></div>
+    <div class="pipeline-stage" data-stage="ingestion">
+      <div class="stage-number">02</div>
+      <div class="stage-icon"><img src="images/icons/ingestion-icon.svg" alt=""></div>
       <h3>Data Ingestion</h3>
-      <p>Real-time collection & validation</p>
+      <p class="stage-brief">Validation, normalization, storage</p>
+      
+      <div class="stage-details">
+        <div class="detail-section">
+          <h4>What it does</h4>
+          <p>Receives data streams from multiple sources, validates accuracy against expected ranges, normalizes formats across heterogeneous systems, and stores time-series data in secure cloud infrastructure optimized for analytical queries.</p>
+        </div>
+        <div class="detail-section">
+          <h4>Why it matters</h4>
+          <p>Raw sensor data contains noise, transmission errors, and format inconsistencies. This stage ensures only verified, analysis-ready data enters the intelligence pipeline—preventing false alerts and maintaining data integrity.</p>
+        </div>
+        <div class="detail-section highlight">
+          <h4>Investor value</h4>
+          <p>Guarantees that investment decisions and performance assessments rest on clean, auditable data rather than unverified field reports or manually compiled spreadsheets.</p>
+        </div>
+      </div>
     </div>
     
-    <div class="pipeline-connector">
-      <svg class="connector-line" viewBox="0 0 100 20">
-        <line class="connection-path" x1="0" y1="10" x2="100" y2="10" />
-        <line class="connection-animated" x1="0" y1="10" x2="100" y2="10" />
-      </svg>
+    <div class="pipeline-stage" data-stage="analytics">
+      <div class="stage-number">03</div>
+      <div class="stage-icon"><img src="images/icons/ai-icon.svg" alt=""></div>
+      <h3>AI Analytics</h3>
+      <p class="stage-brief">Pattern detection, forecasting</p>
+      
+      <div class="stage-details">
+        <div class="detail-section">
+          <h4>What it does</h4>
+          <p>Applies machine learning models to identify performance patterns, detect operational anomalies, forecast equipment degradation, and predict maintenance requirements before failures occur. Continuously learns from historical performance to improve prediction accuracy.</p>
+        </div>
+        <div class="detail-section">
+          <h4>Why it matters</h4>
+          <p>Human operators cannot process thousands of data points per second or recognize subtle degradation patterns across complex infrastructure systems. AI identifies issues invisible to manual oversight and predicts failures weeks before they manifest.</p>
+        </div>
+        <div class="detail-section highlight">
+          <h4>Investor value</h4>
+          <p>Transforms reactive maintenance into predictive optimization—extending asset life, preventing costly emergency repairs, and maintaining consistent service delivery that protects revenue streams and return projections.</p>
+        </div>
+      </div>
     </div>
     
-    <div class="pipeline-block" data-block="3">
-      <div class="block-icon"></div>
-      <h3>AI Analysis</h3>
-      <p>Pattern recognition & forecasting</p>
-    </div>
-    
-    <div class="pipeline-connector">
-      <svg class="connector-line" viewBox="0 0 100 20">
-        <line class="connection-path" x1="0" y1="10" x2="100" y2="10" />
-        <line class="connection-animated" x1="0" y1="10" x2="100" y2="10" />
-      </svg>
-    </div>
-    
-    <div class="pipeline-block" data-block="4">
-      <div class="block-icon"></div>
+    <div class="pipeline-stage" data-stage="risk">
+      <div class="stage-number">04</div>
+      <div class="stage-icon"><img src="images/icons/risk-icon.svg" alt=""></div>
       <h3>Risk Scoring</h3>
-      <p>Automated assessment & alerts</p>
+      <p class="stage-brief">Automated alerts, tracking</p>
+      
+      <div class="stage-details">
+        <div class="detail-section">
+          <h4>What it does</h4>
+          <p>Synthesizes analytical outputs into quantified risk scores across operational, financial, environmental, and compliance dimensions. Generates automated alerts when thresholds are breached, prioritizes issues by severity, and tracks remediation status through resolution.</p>
+        </div>
+        <div class="detail-section">
+          <h4>Why it matters</h4>
+          <p>Converts complex multi-dimensional data into actionable risk intelligence that decision-makers can act on immediately. Prevents information overload by surfacing only significant deviations requiring attention.</p>
+        </div>
+        <div class="detail-section highlight">
+          <h4>Investor value</h4>
+          <p>Provides continuous risk visibility that traditional quarterly reviews cannot match—enabling proactive intervention before minor issues compound into material financial impacts or regulatory violations.</p>
+        </div>
+      </div>
     </div>
     
-    <div class="pipeline-connector">
-      <svg class="connector-line" viewBox="0 0 100 20">
-        <line class="connection-path" x1="0" y1="10" x2="100" y2="10" />
-        <line class="connection-animated" x1="0" y1="10" x2="100" y2="10" />
-      </svg>
-    </div>
-    
-    <div class="pipeline-block" data-block="5">
-      <div class="block-icon"></div>
-      <h3>Investor Dashboard</h3>
-      <p>Real-time insights & reporting</p>
+    <div class="pipeline-stage" data-stage="interface">
+      <div class="stage-number">05</div>
+      <div class="stage-icon"><img src="images/icons/dashboard-icon.svg" alt=""></div>
+      <h3>Stakeholder Interface</h3>
+      <p class="stage-brief">Live dashboards, reporting</p>
+      
+      <div class="stage-details">
+        <div class="detail-section">
+          <h4>What it does</h4>
+          <p>Delivers role-specific dashboards providing real-time visibility into project performance, financial metrics, environmental impact, and operational health. Generates automated compliance reports, investor updates, and regulatory filings with full data traceability.</p>
+        </div>
+        <div class="detail-section">
+          <h4>Why it matters</h4>
+          <p>Different stakeholders need different views of project data. Investors require financial performance and risk metrics; operators need technical diagnostics; regulators need compliance verification. Single unified platform serves all constituencies with appropriate access controls.</p>
+        </div>
+        <div class="detail-section highlight">
+          <h4>Investor value</h4>
+          <p>Eliminates information asymmetry between fund managers and investors. Every stakeholder accesses the same verified data simultaneously—building trust through transparency and enabling faster, better-informed capital allocation decisions.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TECHNOLOGY INTEGRATION SECTION -->
-<section class="tech-integration">
+<!-- TECHNOLOGY LAYERS - STACKED REVEAL -->
+<section class="tech-layers-section">
   <h2>Technology Integration</h2>
-  <p class="section-subtitle">Advanced technologies enhancing infrastructure efficiency and reducing risks</p>
+  <p class="section-subtitle">Advanced technologies improving infrastructure efficiency, reducing risks, and enhancing long-term project sustainability</p>
   
-  <div class="tech-grid">
-    <div class="tech-card">
-      <div class="card-particles"></div>
-      <img src="images/iot.png" alt="IoT Sensors">
-      <h3>IoT Sensors</h3>
-      <p>Real-time monitoring across energy, water, and agriculture infrastructure for continuous performance tracking.</p>
+  <div class="layers-container">
+    <div class="tech-layer" data-layer="iot">
+      <div class="layer-visual">
+        <img src="images/tech/iot-network.jpg" alt="IoT Sensors">
+        <div class="visual-label">Hardware Layer</div>
+      </div>
+      <div class="layer-content">
+        <div class="layer-icon"><img src="images/icons/iot-tech.svg" alt=""></div>
+        <h3>IoT Sensors</h3>
+        <p class="layer-description">Real-time monitoring across energy, water, and agriculture infrastructure for continuous performance tracking.</p>
+        
+        <div class="layer-expanded">
+          <h4>Real-World Application</h4>
+          <p>Solar installations monitor panel-level performance, inverter efficiency, and environmental conditions to optimize energy output. Water facilities track flow rates, treatment chemical levels, and infrastructure pressure to prevent service interruptions and identify leaks before they become critical.</p>
+          
+          <h4>Capital Protection Value</h4>
+          <p>Early detection of equipment degradation prevents catastrophic failures that could halt operations and revenue generation. Continuous monitoring validates operational assumptions made during investment underwriting—ensuring projected returns align with actual performance.</p>
+        </div>
+        
+        <button class="layer-toggle">Expand Details</button>
+      </div>
     </div>
     
-    <div class="tech-card">
-      <div class="card-particles"></div>
-      <img src="images/ai.png" alt="AI & Machine Learning">
-      <h3>AI & Machine Learning</h3>
-      <p>Predictive analytics improve maintenance planning and operational performance with data-driven insights.</p>
+    <div class="tech-layer" data-layer="ai">
+      <div class="layer-visual">
+        <img src="images/tech/ai-processing.jpg" alt="AI Analytics">
+        <div class="visual-label">Intelligence Layer</div>
+      </div>
+      <div class="layer-content">
+        <div class="layer-icon"><img src="images/icons/ai-tech.svg" alt=""></div>
+        <h3>AI & Machine Learning</h3>
+        <p class="layer-description">Predictive analytics improve maintenance planning and operational performance with data-driven insights.</p>
+        
+        <div class="layer-expanded">
+          <h4>Real-World Application</h4>
+          <p>Energy infrastructure models predict generator maintenance windows based on usage patterns and environmental stress, scheduling interventions during low-demand periods. Water systems forecast seasonal demand fluctuations and infrastructure capacity requirements to prevent service gaps.</p>
+          
+          <h4>Capital Protection Value</h4>
+          <p>Predictive maintenance reduces unplanned downtime, protecting revenue continuity and maintaining service-level agreements. Optimization algorithms identify operational inefficiencies that erode margins—enabling corrective action before financial impacts accumulate.</p>
+        </div>
+        
+        <button class="layer-toggle">Expand Details</button>
+      </div>
     </div>
     
-    <div class="tech-card">
-      <div class="card-particles"></div>
-      <img src="images/blockchain.png" alt="Blockchain">
-      <h3>Blockchain Technology</h3>
-      <p>Secure and transparent tracking of assets, contracts, and digital transactions across all stakeholders.</p>
+    <div class="tech-layer" data-layer="blockchain">
+      <div class="layer-visual">
+        <img src="images/tech/blockchain-network.jpg" alt="Blockchain">
+        <div class="visual-label">Trust Layer</div>
+      </div>
+      <div class="layer-content">
+        <div class="layer-icon"><img src="images/icons/blockchain-tech.svg" alt=""></div>
+        <h3>Blockchain Technology</h3>
+        <p class="layer-description">Secure and transparent tracking of assets, contracts, and digital transactions across all stakeholders.</p>
+        
+        <div class="layer-expanded">
+          <h4>Real-World Application</h4>
+          <p>Construction milestone payments execute automatically when sensor data confirms installation completion and performance testing validates specifications. Energy offtake agreements trigger payments when verified generation data confirms delivery commitments, eliminating reconciliation disputes.</p>
+          
+          <h4>Capital Protection Value</h4>
+          <p>Immutable records prevent data manipulation or retroactive reporting adjustments that could obscure performance issues. Automated contract execution reduces payment delays and disputes—improving cash flow predictability and reducing administrative overhead across portfolio operations.</p>
+        </div>
+        
+        <button class="layer-toggle">Expand Details</button>
+      </div>
     </div>
     
-    <div class="tech-card">
-      <div class="card-particles"></div>
-      <img src="images/cloud.png" alt="Cloud Dashboards">
-      <h3>Cloud Dashboards</h3>
-      <p>Centralized, accessible project data for all stakeholders with real-time updates and reporting.</p>
+    <div class="tech-layer" data-layer="cloud">
+      <div class="layer-visual">
+        <img src="images/tech/cloud-infrastructure.jpg" alt="Cloud Platform">
+        <div class="visual-label">Platform Layer</div>
+      </div>
+      <div class="layer-content">
+        <div class="layer-icon"><img src="images/icons/cloud-tech.svg" alt=""></div>
+        <h3>Cloud Dashboards</h3>
+        <p class="layer-description">Centralized, accessible project data for all stakeholders with real-time updates and reporting.</p>
+        
+        <div class="layer-expanded">
+          <h4>Real-World Application</h4>
+          <p>Investors access real-time dashboards showing portfolio-wide performance against projections, individual project health scores, and comparative efficiency metrics. Project operators view technical diagnostics and maintenance schedules. Regulators access compliance verification data without exposing commercially sensitive information.</p>
+          
+          <h4>Capital Protection Value</h4>
+          <p>Unified platform eliminates information silos that allow underperforming projects to hide behind selective reporting. Portfolio-level visibility enables rapid capital reallocation from lagging to high-performing assets—optimizing overall fund returns and reducing exposure to sustained underperformance.</p>
+        </div>
+        
+        <button class="layer-toggle">Expand Details</button>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- COMPETITIVE ADVANTAGE - COMPARISON EXPERIENCE -->
-<section class="competitive-comparison">
-  <h2>Platform Advantages</h2>
-  <p class="section-subtitle">How our infrastructure intelligence platform outperforms traditional approaches</p>
+<!-- COMPETITIVE ADVANTAGES - HEXAGONAL GRID -->
+<section class="advantages-hexagon">
+  <h2>Competitive Advantage</h2>
+  <p class="section-subtitle">Our integrated approach combines financial capital with technological innovation to solve critical infrastructure challenges</p>
   
-  <div class="comparison-grid">
-    <!-- Transparency -->
-    <div class="advantage-row">
-      <div class="advantage-label">
-        <h3>Transparency</h3>
+  <div class="hex-grid">
+    <div class="hex-item">
+      <div class="hex-shape">
+        <div class="hex-icon"><img src="images/icons/visibility-icon.svg" alt=""></div>
       </div>
-      <div class="comparison-bars">
-        <div class="bar-container">
-          <span class="bar-label">Traditional</span>
-          <div class="bar traditional">
-            <div class="bar-fill" data-width="35"></div>
-            <span class="bar-value">35%</span>
-          </div>
+      <div class="hex-content">
+        <h3>Digital Visibility</h3>
+        <p>Real-time digital tracking of renewable energy projects, water systems, and infrastructure operations.</p>
+      </div>
+    </div>
+    
+    <div class="hex-item">
+      <div class="hex-shape">
+        <div class="hex-icon"><img src="images/icons/derisk-icon.svg" alt=""></div>
+      </div>
+      <div class="hex-content">
+        <h3>De-risking Projects</h3>
+        <p>Operational transparency attracts more investors and reduces project risk across markets.</p>
+      </div>
+    </div>
+    
+    <div class="hex-item">
+      <div class="hex-shape">
+        <div class="hex-icon"><img src="images/icons/efficiency-icon.svg" alt=""></div>
+      </div>
+      <div class="hex-content">
+        <h3>Operational Efficiency</h3>
+        <p>Technology improves decision-making, reduces long-term costs, and increases reliability.</p>
+      </div>
+    </div>
+    
+    <div class="hex-item">
+      <div class="hex-shape">
+        <div class="hex-icon"><img src="images/icons/africa-icon.svg" alt=""></div>
+      </div>
+      <div class="hex-content">
+        <h3>Local Focus</h3>
+        <p>Deep understanding of African markets enables tailored and effective project execution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANIMATED COMPARISON - FLIP CARDS -->
+<section class="comparison-flip">
+  <h2>Traditional vs. Platform Approach</h2>
+  <p class="section-subtitle">Click each card to see how our platform transforms infrastructure investment</p>
+  
+  <div class="flip-grid">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="card-label">Reporting</div>
+          <h3>Traditional Approach</h3>
+          <div class="approach-icon traditional"><img src="images/icons/manual-icon.svg" alt=""></div>
+          <p>Manual quarterly reports with 4-12 week delays</p>
         </div>
-        <div class="bar-container">
-          <span class="bar-label">Our Platform</span>
-          <div class="bar platform">
-            <div class="bar-fill" data-width="94"></div>
-            <span class="bar-value">94%</span>
-          </div>
+        <div class="flip-card-back">
+          <div class="card-label">Reporting</div>
+          <h3>Platform Approach</h3>
+          <div class="approach-icon platform"><img src="images/icons/realtime-icon.svg" alt=""></div>
+          <p>Real-time dashboards with continuous data streams and instant stakeholder access</p>
         </div>
       </div>
     </div>
     
-    <!-- Risk Reduction -->
-    <div class="advantage-row">
-      <div class="advantage-label">
-        <h3>Risk Reduction</h3>
-      </div>
-      <div class="comparison-bars">
-        <div class="bar-container">
-          <span class="bar-label">Traditional</span>
-          <div class="bar traditional">
-            <div class="bar-fill" data-width="28"></div>
-            <span class="bar-value">28%</span>
-          </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="card-label">Maintenance</div>
+          <h3>Traditional Approach</h3>
+          <div class="approach-icon traditional"><img src="images/icons/reactive-icon.svg" alt=""></div>
+          <p>Reactive repairs after equipment failure</p>
         </div>
-        <div class="bar-container">
-          <span class="bar-label">Our Platform</span>
-          <div class="bar platform">
-            <div class="bar-fill" data-width="87"></div>
-            <span class="bar-value">87%</span>
-          </div>
+        <div class="flip-card-back">
+          <div class="card-label">Maintenance</div>
+          <h3>Platform Approach</h3>
+          <div class="approach-icon platform"><img src="images/icons/predictive-icon.svg" alt=""></div>
+          <p>Predictive AI forecasts maintenance needs weeks in advance, scheduling optimal intervention windows</p>
         </div>
       </div>
     </div>
     
-    <!-- Speed -->
-    <div class="advantage-row">
-      <div class="advantage-label">
-        <h3>Deployment Speed</h3>
-      </div>
-      <div class="comparison-bars">
-        <div class="bar-container">
-          <span class="bar-label">Traditional</span>
-          <div class="bar traditional">
-            <div class="bar-fill" data-width="42"></div>
-            <span class="bar-value">42%</span>
-          </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="card-label">Transparency</div>
+          <h3>Traditional Approach</h3>
+          <div class="approach-icon traditional"><img src="images/icons/opacity-icon.svg" alt=""></div>
+          <p>Limited access to aggregated summaries</p>
         </div>
-        <div class="bar-container">
-          <span class="bar-label">Our Platform</span>
-          <div class="bar platform">
-            <div class="bar-fill" data-width="91"></div>
-            <span class="bar-value">91%</span>
-          </div>
+        <div class="flip-card-back">
+          <div class="card-label">Transparency</div>
+          <h3>Platform Approach</h3>
+          <div class="approach-icon platform"><img src="images/icons/transparency-icon.svg" alt=""></div>
+          <p>Complete visibility into granular operational metrics with full audit trails and verified performance data</p>
         </div>
       </div>
     </div>
     
-    <!-- Capital Efficiency -->
-    <div class="advantage-row">
-      <div class="advantage-label">
-        <h3>Capital Efficiency</h3>
-      </div>
-      <div class="comparison-bars">
-        <div class="bar-container">
-          <span class="bar-label">Traditional</span>
-          <div class="bar traditional">
-            <div class="bar-fill" data-width="38"></div>
-            <span class="bar-value">38%</span>
-          </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="card-label">Decision Speed</div>
+          <h3>Traditional Approach</h3>
+          <div class="approach-icon traditional"><img src="images/icons/slow-icon.svg" alt=""></div>
+          <p>Lengthy due diligence with manual verification</p>
         </div>
-        <div class="bar-container">
-          <span class="bar-label">Our Platform</span>
-          <div class="bar platform">
-            <div class="bar-fill" data-width="89"></div>
-            <span class="bar-value">89%</span>
-          </div>
+        <div class="flip-card-back">
+          <div class="card-label">Decision Speed</div>
+          <h3>Platform Approach</h3>
+          <div class="approach-icon platform"><img src="images/icons/fast-icon.svg" alt=""></div>
+          <p>Pre-integrated monitoring enables faster capital deployment based on real-time validated data</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="solutions-cta">
+  <div class="cta-container">
+    <h2>Transform Your Infrastructure Investment Approach</h2>
+    <p>Discover how integrated intelligence creates institutional-grade transparency and operational confidence</p>
+    
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn-primary">Schedule Platform Demo</a>
+      <a href="about.html" class="btn-secondary">Learn Our Approach</a>
     </div>
   </div>
 </section>

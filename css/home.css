@@ -587,12 +587,13 @@ nav.scrolled .logo img {
   transform: translateX(4px);
 }
 
+/* Feature icon as image */
 .feature-icon {
   width: 32px;
   height: 32px;
-  background: linear-gradient(135deg, var(--accent), var(--success));
-  border-radius: 6px;
+  object-fit: contain;
   flex-shrink: 0;
+  border-radius: 6px;
 }
 
 .feature-item span {

@@ -195,7 +195,7 @@ function initSectorSelector() {
         logistics: {
             image: 'images/logistics.png',
             title: 'Logistics Infrastructure',
-            description: 'Real-time monitoring of ports, highways, railways, and cargo handling facilities. Our intelligence platform delivers comprehensive visibility into transportation networks, enabling data-driven investment decisions in Africa\'s critical logistics infrastructure.'
+            description: 'Real-time monitoring of ports, highways, railways, and cargo handling facilities. Our intelligence platform delivers comprehensive visibility into transportation networks, enabling data-driven investment decisions in Africa\'s critical logistics infrastructure basing in improving Africa in  different ways possible.'
         },
         agriculture: {
             image: 'images/agriculture.png',
