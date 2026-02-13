@@ -315,7 +315,6 @@ nav ul li a.active::after {
   color: var(--grey-medium);
   font-weight: 500;
 }
-
 /* ==================================
    MISSION & VISION
    ================================== */
@@ -334,53 +333,64 @@ nav ul li a.active::after {
 
 .mission-card,
 .vision-card {
+  position: relative;
   padding: 50px;
-  background: var(--white);
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  min-height: 340px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark overlay via pseudo-element */
+.mission-card::before,
+.vision-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 26, 41, 0.92) 0%,
+    rgba(0, 26, 41, 0.70) 50%,
+    rgba(0, 26, 41, 0.45) 100%
+  );
+  border-radius: 16px;
+  z-index: 1;
 }
 
 .mission-card:hover,
 .vision-card:hover {
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.25);
   transform: translateY(-6px);
 }
 
-.card-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: 2px solid var(--grey);
-}
-
-.header-icon {
-  width: 54px;
-  height: 54px;
-}
-
-.header-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.card-header h3 {
-  font-size: 28px;
+/* Content sits above the overlay */
+.mission-card h3,
+.vision-card h3 {
+  position: relative;
+  z-index: 2;
+  font-size: 30px;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--white);
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(0, 168, 232, 0.6);
 }
 
 .mission-card p,
 .vision-card p {
+  position: relative;
+  z-index: 2;
   font-size: 16px;
   line-height: 1.8;
-  color: var(--grey-dark);
-  opacity: 0.9;
+  color: rgba(255, 255, 255, 0.88);
 }
-
 /* ==================================
    WHAT WE DO - LIFECYCLE TIMELINE
    ================================== */
@@ -764,8 +774,8 @@ nav ul li a.active::after {
 }
 
 .matter-icon {
-  width: 60px;
-  height: 60px;
+  width: 200px;
+  height: 200px;
   margin-bottom: 20px;
 }
 
@@ -773,7 +783,7 @@ nav ul li a.active::after {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
 }
 
 .matter-item h3 {
