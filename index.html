@@ -15,15 +15,15 @@
     <img src="images/white logo.png" alt="Capital Innovation Fund">
   </div>
 
- <!-- Desktop Menu -->
+  <!-- Desktop Menu — only visible on ≥969px via CSS -->
   <ul class="desktop-menu">
-    <li><a href="/" class="active">Home</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="solutions.html">Solutions</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  
-  <!-- Mobile Menu Toggle -->
+
+  <!-- Mobile Menu Toggle — only visible on ≤968px via CSS -->
   <button class="mobile-menu-toggle" aria-label="Toggle menu">
     <span class="hamburger-line"></span>
     <span class="hamburger-line"></span>
@@ -31,33 +31,46 @@
   </button>
 </nav>
 
-<!-- Mobile Sidebar -->
+<!-- Mobile Sidebar — rendered outside nav, controlled via JS -->
 <div class="mobile-sidebar">
   <div class="sidebar-overlay"></div>
   <div class="sidebar-content">
     <button class="sidebar-close" aria-label="Close menu">&times;</button>
     <ul class="sidebar-menu">
-      <li><a href="/contact" class="active">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/solutions">Solutions</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="index.html" class="active">Home</a></li><!-- FIX: was /contact -->
+      <li><a href="about.html">About</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </div>
 
-<!-- HERO SECTION - LIVE NETWORK CITY -->
+<!-- HERO SECTION -->
 <section class="hero">
 
-  <video class="hero-background-video" autoplay muted loop playsinline>
-  <source src="images/hero.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-  
+  <!--
+    VIDEO BACKGROUND
+    - poster: shown while video loads or if video is blocked
+    - The raw text fallback is hidden via CSS so it never flashes on screen
+  -->
+  <video
+    class="hero-background-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    poster="images/hero-poster.jpg"
+  >
+    <source src="images/hero.mp4" type="video/mp4">
+    <!-- Hidden fallback text — styled display:none in CSS -->
+    <span class="video-fallback-hidden">Your browser does not support the video tag.</span>
+  </video>
+
   <!-- Animated Network Canvas Overlay -->
   <div class="network-canvas-container">
     <canvas id="networkCanvas"></canvas>
   </div>
-  
+
   <div class="hero-overlay"></div>
   <div class="scanning-line"></div>
 
@@ -111,24 +124,38 @@
 
       <div class="sector-description">
         <h3 id="sectorTitle">Water Infrastructure</h3>
-        <p id="sectorText">Comprehensive monitoring of water distribution networks, treatment facilities, and irrigation systems across Africa. Our platform provides real-time visibility into water quality, flow rates, and infrastructure performance to ensure sustainable water management and attract investment in critical water projects.</p>
-        
+        <p id="sectorText">Comprehensive monitoring of water distribution networks, treatment facilities, and irrigation systems across Africa. Our platform provides real-time visibility into water quality, flow rates, pipe pressure, chemical dosing levels, and infrastructure performance — ensuring sustainable water management and attracting investment in critical water projects.</p>
+
+        <!-- UPGRADED: Capabilities rendered as a visual grid with icons -->
+        <div class="capabilities-label">Platform Capabilities</div>
         <div class="sector-features">
           <div class="feature-item">
             <img class="feature-icon" src="images/sensors.png" alt="IoT Sensor Networks">
-            <span>IoT Sensor Networks</span>
+            <div class="feature-text">
+              <span class="feature-title">IoT Sensor Networks</span>
+              <span class="feature-desc">300+ data points per asset</span>
+            </div>
           </div>
           <div class="feature-item">
             <img class="feature-icon" src="images/monitoring.png" alt="Real-time Monitoring">
-            <span>Real-time Monitoring</span>
+            <div class="feature-text">
+              <span class="feature-title">Real-time Monitoring</span>
+              <span class="feature-desc">Live dashboards, 24/7</span>
+            </div>
           </div>
           <div class="feature-item">
             <img class="feature-icon" src="images/prediction.png" alt="Predictive Analytics">
-            <span>Predictive Analytics</span>
+            <div class="feature-text">
+              <span class="feature-title">Predictive Analytics</span>
+              <span class="feature-desc">AI-driven risk forecasts</span>
+            </div>
           </div>
           <div class="feature-item">
             <img class="feature-icon" src="images/auditor.png" alt="Investment Reporting">
-            <span>Investment Reporting</span>
+            <div class="feature-text">
+              <span class="feature-title">Investment Reporting</span>
+              <span class="feature-desc">Automated, auditor-ready</span>
+            </div>
           </div>
         </div>
       </div>
@@ -142,7 +169,6 @@
   <p class="timeline-subtitle">From fragmentation to intelligence-driven capital deployment</p>
 
   <div class="timeline-container">
-    <!-- Africa Map Background (SVG embedded) -->
     <div class="africa-map">
       <svg class="map-svg" viewBox="0 0 800 800">
         <path id="timelinePath" class="timeline-path" d="M 100 200 Q 400 150 700 200 Q 650 400 600 600 Q 400 650 200 600 Q 150 400 100 200" />
@@ -150,8 +176,8 @@
       </svg>
     </div>
 
-    <!-- Timeline Steps -->
     <div class="timeline-steps">
+
       <div class="timeline-step" data-step="1">
         <div class="step-number">01</div>
         <div class="step-content">
@@ -168,11 +194,77 @@
         </div>
       </div>
 
-      <div class="timeline-step" data-step="3">
+      <!-- STEP 03: Intelligence — now includes a live mockup card -->
+      <div class="timeline-step intelligence-step" data-step="3">
         <div class="step-number">03</div>
         <div class="step-content">
           <h3>Intelligence</h3>
           <p>AI analytics transform raw data into actionable insights, risk scores, and investment recommendations.</p>
+
+          <!-- MOCKUP: What a Risk Score & Recommendation actually looks like -->
+          <div class="intelligence-mockup">
+            <div class="mockup-header">
+              <span class="mockup-badge">LIVE PLATFORM OUTPUT</span>
+              <span class="mockup-timestamp">Updated: 2 min ago</span>
+            </div>
+
+            <div class="mockup-body">
+              <!-- Risk Score Panel -->
+              <div class="mockup-risk">
+                <div class="risk-label">Project Risk Score</div>
+                <div class="risk-project">Nairobi Water Network — Zone 4B</div>
+                <div class="risk-gauge">
+                  <div class="gauge-track">
+                    <div class="gauge-fill" style="width: 28%"></div>
+                    <div class="gauge-marker" style="left: 28%">
+                      <span class="gauge-value">28</span>
+                    </div>
+                  </div>
+                  <div class="gauge-labels">
+                    <span class="label-low">Low Risk</span>
+                    <span class="label-med">Moderate</span>
+                    <span class="label-high">High Risk</span>
+                  </div>
+                </div>
+                <div class="risk-factors">
+                  <div class="factor good">
+                    <span class="factor-dot"></span>Flow rate: Normal (+2.1%)
+                  </div>
+                  <div class="factor good">
+                    <span class="factor-dot"></span>Water quality: Grade A
+                  </div>
+                  <div class="factor warn">
+                    <span class="factor-dot warn"></span>Pipe pressure: ↑ Watch zone
+                  </div>
+                </div>
+              </div>
+
+              <!-- Investment Recommendation Panel -->
+              <div class="mockup-recommendation">
+                <div class="rec-label">AI Recommendation</div>
+                <div class="rec-badge buy">EXPAND ALLOCATION</div>
+                <p class="rec-text">
+                  Infrastructure performing 14% above baseline projections. Predictive model forecasts continued outperformance over 18-month horizon. Recommend increasing position by <strong>R 4.2M</strong> to capture expansion window.
+                </p>
+                <div class="rec-metrics">
+                  <div class="rec-metric">
+                    <span class="metric-val">94%</span>
+                    <span class="metric-lbl">Confidence</span>
+                  </div>
+                  <div class="rec-metric">
+                    <span class="metric-val">18mo</span>
+                    <span class="metric-lbl">Horizon</span>
+                  </div>
+                  <div class="rec-metric">
+                    <span class="metric-val">+14%</span>
+                    <span class="metric-lbl">vs Baseline</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end mockup -->
+
         </div>
       </div>
 
@@ -183,6 +275,7 @@
           <p>Transparent, verified infrastructure becomes investable, accelerating funding and project delivery across sectors.</p>
         </div>
       </div>
+
     </div>
   </div>
 </section>
