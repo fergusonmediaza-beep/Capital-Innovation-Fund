@@ -868,3 +868,341 @@ footer .social img:hover {
     gap: 25px;
   }
 }
+
+
+/* ===================================
+   INDEX.CSS ADDITIONS
+   Append these styles to the bottom of css/index.css
+   Covers:
+   1. Video fallback hidden text
+   2. Enhanced capabilities feature grid
+   3. Intelligence mockup card (Step 03)
+   =================================== */
+
+/* ==================================
+   1. VIDEO FALLBACK — hide raw text
+   ================================== */
+.video-fallback-hidden {
+  display: none;
+}
+
+/* ==================================
+   2. ENHANCED CAPABILITIES GRID
+   Replaces the simple 2-col feature grid
+   ================================== */
+.capabilities-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 14px;
+  margin-top: 10px;
+}
+
+/* Override existing .sector-features to use a richer card layout */
+.sector-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  background: var(--grey);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  background: #fff;
+  border-color: rgba(0, 168, 232, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 168, 232, 0.1);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: rgba(0, 168, 232, 0.08);
+  padding: 4px;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.feature-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--blue);
+  line-height: 1.2;
+}
+
+.feature-desc {
+  font-size: 11px;
+  color: #888;
+  font-weight: 500;
+}
+
+/* ==================================
+   3. INTELLIGENCE MOCKUP — Step 03
+   ================================== */
+
+/* Make the intelligence step span full width on the 2-col grid */
+.intelligence-step {
+  grid-column: 1 / -1;
+}
+
+.intelligence-mockup {
+  margin-top: 28px;
+  background: rgba(0, 168, 232, 0.06);
+  border: 1px solid rgba(0, 168, 232, 0.2);
+  border-radius: 14px;
+  overflow: hidden;
+  font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+.mockup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(0, 168, 232, 0.12);
+  border-bottom: 1px solid rgba(0, 168, 232, 0.15);
+}
+
+.mockup-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.mockup-timestamp {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.mockup-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+/* ---- Risk Score Panel ---- */
+.mockup-risk {
+  padding: 24px;
+  border-right: 1px solid rgba(0, 168, 232, 0.15);
+}
+
+.risk-label,
+.rec-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 6px;
+}
+
+.risk-project {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 16px;
+  font-family: -apple-system, sans-serif;
+}
+
+/* Risk gauge bar */
+.risk-gauge {
+  margin-bottom: 16px;
+}
+
+.gauge-track {
+  position: relative;
+  height: 8px;
+  background: linear-gradient(90deg,
+    rgba(0, 255, 136, 0.5) 0%,
+    rgba(255, 200, 0, 0.5) 50%,
+    rgba(255, 60, 60, 0.5) 100%
+  );
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.gauge-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: rgba(255,255,255,0.15);
+  border-radius: 999px;
+}
+
+.gauge-marker {
+  position: absolute;
+  top: -4px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gauge-value {
+  background: #fff;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  margin-bottom: 4px;
+}
+
+.gauge-marker::after {
+  content: '';
+  width: 2px;
+  height: 16px;
+  background: #fff;
+  border-radius: 2px;
+  display: block;
+}
+
+.gauge-labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gauge-labels span {
+  font-size: 9px;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Risk factors list */
+.risk-factors {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.factor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+  font-family: -apple-system, sans-serif;
+}
+
+.factor-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00ff88;
+  flex-shrink: 0;
+}
+
+.factor-dot.warn {
+  background: #ffaa00;
+}
+
+/* ---- Recommendation Panel ---- */
+.mockup-recommendation {
+  padding: 24px;
+}
+
+.rec-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 5px 14px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+.rec-badge.buy {
+  background: rgba(0, 255, 136, 0.15);
+  color: #00ff88;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+.rec-text {
+  font-size: 12px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.75);
+  font-family: -apple-system, sans-serif;
+  margin-bottom: 18px;
+}
+
+.rec-text strong {
+  color: #fff;
+}
+
+.rec-metrics {
+  display: flex;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.rec-metric {
+  flex: 1;
+  text-align: center;
+  padding: 10px 6px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.rec-metric:last-child {
+  border-right: none;
+}
+
+.metric-val {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.metric-lbl {
+  display: block;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255,255,255,0.4);
+  font-family: -apple-system, sans-serif;
+}
+
+/* ==================================
+   RESPONSIVE — mockup
+   ================================== */
+@media (max-width: 768px) {
+  .mockup-body {
+    grid-template-columns: 1fr;
+  }
+
+  .mockup-risk {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 168, 232, 0.15);
+  }
+
+  .sector-features {
+    grid-template-columns: 1fr;
+  }
+}
