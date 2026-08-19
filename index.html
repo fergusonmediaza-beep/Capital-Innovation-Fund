@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="site">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5F7ED028S"></script>
@@ -14,14 +14,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="IvQYvxl6Jg-6XZFEUFnVQ3bmYWdVXa50-54sATAOf3g" />
 <title>Capital Innovation Fund - Infrastructure Intelligence Platform</title>
-<link rel="stylesheet" href="css/index.css">
+<meta name="description" content="Capital Innovation Fund brings real-time IoT monitoring, AI analytics, and investment-grade transparency to infrastructure investment across Africa's energy, water, logistics, agriculture and gas sectors.">
+<meta name="keywords" content="infrastructure investment Africa, infrastructure intelligence platform, IoT monitoring, AI analytics, infrastructure funding, real-time infrastructure monitoring">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Capital Innovation Fund">
+<meta property="og:title" content="Capital Innovation Fund - Infrastructure Intelligence Platform">
+<meta property="og:description" content="Real-time visibility. AI-powered insights. Investment-grade transparency for Africa's infrastructure growth.">
+<meta property="og:url" content="https://capitalinnovationfund.co.za/">
+<link rel="canonical" href="https://capitalinnovationfund.co.za/">
+<meta property="og:image" content="https://capitalinnovationfund.co.za/images/hero.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Capital Innovation Fund",
+  "url": "https://capitalinnovationfund.co.za/",
+  "logo": "https://capitalinnovationfund.co.za/images/logo.webp",
+  "description": "Infrastructure intelligence platform combining institutional capital with real-time monitoring across Africa's energy, water, logistics, agriculture and gas sectors.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3rd Floor, 7 West Quay Road, V&A Waterfront",
+    "addressLocality": "Cape Town",
+    "postalCode": "8001",
+    "addressCountry": "ZA"
+  },
+  "telephone": "+27110841100",
+  "email": "info@capitalinnovation.fund"
+}
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body>
+<body class="site-body page-home">
 
 <!-- NAVIGATION -->
-<nav id="mainNav">
+<nav id="main_nav" class="site-nav">
   <div class="logo">
-    <img src="images/white logo.png" alt="Capital Innovation Fund">
+    <img src="images/white logo.webp" alt="Capital Innovation Fund">
   </div>
 
   <!-- Desktop Menu — only visible on ≥969px via CSS -->
@@ -68,8 +97,9 @@
     muted
     loop
     playsinline
-    poster="images/hero-poster.jpg"
+    poster="images/hero-poster.webp"
   >
+    <source src="images/hero.webm" type="video/webm">
     <source src="images/hero.mp4" type="video/mp4">
     <!-- Hidden fallback text — styled display:none in CSS -->
     <span class="video-fallback-hidden">Your browser does not support the video tag.</span>
@@ -77,7 +107,7 @@
 
   <!-- Animated Network Canvas Overlay -->
   <div class="network-canvas-container">
-    <canvas id="networkCanvas"></canvas>
+    <canvas id="network_canvas"></canvas>
   </div>
 
   <div class="hero-overlay"></div>
@@ -105,7 +135,7 @@
   </div>
 
   <div class="sector-selector">
-    <!-- Sector Tabs -->
+    <!-- Sector Tabs — desktop/tablet only, see .sector-select below for mobile -->
     <div class="sector-tabs">
       <button class="sector-tab active" data-sector="water">
         <span class="tab-label">Water</span>
@@ -124,43 +154,53 @@
       </button>
     </div>
 
+    <!-- Sector Dropdown — mobile only, see .sector-tabs above for desktop -->
+    <label for="sector_select" class="visually-hidden">Choose an infrastructure sector</label>
+    <select id="sector_select" class="sector-select">
+      <option value="water">Water</option>
+      <option value="energy">Energy</option>
+      <option value="logistics">Logistics</option>
+      <option value="agriculture">Agriculture</option>
+      <option value="gas">Gas</option>
+    </select>
+
     <!-- Sector Content Display -->
     <div class="sector-display">
       <div class="sector-image">
-        <img id="sectorImage" src="images/water.png" alt="Water Infrastructure">
+        <img loading="lazy" decoding="async" id="sector_image" src="images/water.webp" alt="Water Infrastructure">
         <div class="image-overlay"></div>
       </div>
 
       <div class="sector-description">
-        <h3 id="sectorTitle">Water Infrastructure</h3>
-        <p id="sectorText">Comprehensive monitoring of water distribution networks, treatment facilities, and irrigation systems across Africa. Our platform provides real-time visibility into water quality, flow rates, pipe pressure, chemical dosing levels, and infrastructure performance — ensuring sustainable water management and attracting investment in critical water projects.</p>
+        <h3 id="sector_title">Water Infrastructure</h3>
+        <p id="sector_text">Comprehensive monitoring of water distribution networks, treatment facilities, and irrigation systems across Africa. Our platform provides real-time visibility into water quality, flow rates, pipe pressure, chemical dosing levels, and infrastructure performance — ensuring sustainable water management and attracting investment in critical water projects.</p>
 
         <!-- UPGRADED: Capabilities rendered as a visual grid with icons -->
         <div class="capabilities-label">Platform Capabilities</div>
         <div class="sector-features">
           <div class="feature-item">
-            <img class="feature-icon" src="images/sensors.png" alt="IoT Sensor Networks">
+            <img loading="lazy" decoding="async" class="feature-icon" src="images/sensors.webp" alt="IoT Sensor Networks">
             <div class="feature-text">
               <span class="feature-title">IoT Sensor Networks</span>
               <span class="feature-desc">300+ data points per asset</span>
             </div>
           </div>
           <div class="feature-item">
-            <img class="feature-icon" src="images/monitoring.png" alt="Real-time Monitoring">
+            <img loading="lazy" decoding="async" class="feature-icon" src="images/monitoring.webp" alt="Real-time Monitoring">
             <div class="feature-text">
               <span class="feature-title">Real-time Monitoring</span>
               <span class="feature-desc">Live dashboards, 24/7</span>
             </div>
           </div>
           <div class="feature-item">
-            <img class="feature-icon" src="images/prediction.png" alt="Predictive Analytics">
+            <img loading="lazy" decoding="async" class="feature-icon" src="images/prediction.webp" alt="Predictive Analytics">
             <div class="feature-text">
               <span class="feature-title">Predictive Analytics</span>
               <span class="feature-desc">AI-driven risk forecasts</span>
             </div>
           </div>
           <div class="feature-item">
-            <img class="feature-icon" src="images/auditor.png" alt="Investment Reporting">
+            <img loading="lazy" decoding="async" class="feature-icon" src="images/auditor.webp" alt="Investment Reporting">
             <div class="feature-text">
               <span class="feature-title">Investment Reporting</span>
               <span class="feature-desc">Automated, auditor-ready</span>
@@ -180,8 +220,8 @@
   <div class="timeline-container">
     <div class="africa-map">
       <svg class="map-svg" viewBox="0 0 800 800">
-        <path id="timelinePath" class="timeline-path" d="M 100 200 Q 400 150 700 200 Q 650 400 600 600 Q 400 650 200 600 Q 150 400 100 200" />
-        <path id="timelinePathFill" class="timeline-path-fill" d="M 100 200 Q 400 150 700 200 Q 650 400 600 600 Q 400 650 200 600 Q 150 400 100 200" />
+        <path id="timeline_path" class="timeline-path" d="M 100 200 Q 400 150 700 200 Q 650 400 600 600 Q 400 650 200 600 Q 150 400 100 200" />
+        <path id="timeline_path_fill" class="timeline-path-fill" d="M 100 200 Q 400 150 700 200 Q 650 400 600 600 Q 400 650 200 600 Q 150 400 100 200" />
       </svg>
     </div>
 
@@ -224,8 +264,8 @@
                 <div class="risk-project">Nairobi Water Network — Zone 4B</div>
                 <div class="risk-gauge">
                   <div class="gauge-track">
-                    <div class="gauge-fill" style="width: 28%"></div>
-                    <div class="gauge-marker" style="left: 28%">
+                    <div class="gauge-fill gauge-fill--28"></div>
+                    <div class="gauge-marker gauge-marker--28">
                       <span class="gauge-value">28</span>
                     </div>
                   </div>
@@ -299,15 +339,35 @@
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-content">
-    <img src="images/navy logo.png" alt="Capital Innovation Fund">
-    <div class="social">
-      <img src="images/social.png" alt="Social Media">
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-simple">
+      <div class="footer-brand">
+        <img loading="lazy" decoding="async" src="images/navy logo.webp" alt="Capital Innovation Fund" class="footer-logo">
+        <p class="footer-tagline">Transforming Africa's infrastructure landscape through strategic capital deployment and operational excellence.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-links-title">Quick Links</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <div class="footer-links-title">Contact</div>
+        <p>3rd Floor, 7 West Quay Road<br>V&amp;A Waterfront, Cape Town 8001</p>
+        <p><a href="tel:+27110841100">+27 11 084 1100</a></p>
+        <p><a href="mailto:info@capitalinnovation.fund">info@capitalinnovation.fund</a></p>
+      </div>
     </div>
   </div>
 </footer>
 
-<script src="js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>

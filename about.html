@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="site">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5F7ED028S"></script>
@@ -13,23 +13,74 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About - Capital Innovation Fund</title>
-<link rel="stylesheet" href="css/about.css">
+<meta name="description" content="Learn how Capital Innovation Fund integrates institutional-grade capital with real-time monitoring, predictive analytics, and transparent reporting across African infrastructure projects.">
+<meta name="keywords" content="about capital innovation fund, infrastructure investment Africa, digital intelligence infrastructure, African infrastructure development">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Capital Innovation Fund">
+<meta property="og:title" content="About - Capital Innovation Fund">
+<meta property="og:description" content="Where strategic capital meets digital intelligence — embedding real-time monitoring and predictive analytics into every project we fund.">
+<meta property="og:url" content="https://capitalinnovationfund.co.za/about.html">
+<link rel="canonical" href="https://capitalinnovationfund.co.za/about.html">
+<meta property="og:image" content="https://capitalinnovationfund.co.za/images/bridge.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Capital Innovation Fund",
+  "url": "https://capitalinnovationfund.co.za/about.html",
+  "logo": "https://capitalinnovationfund.co.za/images/logo.webp",
+  "description": "Infrastructure intelligence platform combining institutional capital with real-time monitoring across Africa's energy, water, logistics, agriculture and gas sectors.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3rd Floor, 7 West Quay Road, V&A Waterfront",
+    "addressLocality": "Cape Town",
+    "postalCode": "8001",
+    "addressCountry": "ZA"
+  },
+  "telephone": "+27110841100",
+  "email": "info@capitalinnovation.fund"
+}
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body>
+<body class="site-body">
 
 <!-- NAVIGATION -->
-<nav id="mainNav">
+<nav id="main_nav" class="site-nav">
   <div class="logo">
-    <img src="images/white logo.png" alt="Capital Innovation Fund">
+    <img src="images/white logo.webp" alt="Capital Innovation Fund">
   </div>
 
-  <ul>
+  <!-- Desktop Menu — only visible on ≥969px via CSS -->
+  <ul class="desktop-menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html" class="active">About</a></li>
     <li><a href="solutions.html">Solutions</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
+
+  <!-- Mobile Menu Toggle — only visible on ≤968px via CSS -->
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
 </nav>
+
+<!-- Mobile Sidebar — rendered outside nav, controlled via JS -->
+<div class="mobile-sidebar">
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-content">
+    <button class="sidebar-close" aria-label="Close menu">&times;</button>
+    <ul class="sidebar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
 
 <!-- HERO SECTION -->
 <section class="about-hero">
@@ -41,16 +92,21 @@
       <div class="data-network"></div>
     </div>
     <div class="parallax-layer layer-front">
-      <img src="images/bridge.png" alt="African Infrastructure">
+      <img src="images/bridge.webp" alt="African Infrastructure" fetchpriority="high">
     </div>
   </div>
   
   <div class="hero-overlay"></div>
   
-  <div class="about-hero-content">
+  <div class="hero-content">
     <div class="hero-label">Infrastructure Intelligence Platform</div>
-    <h1>Where Strategic Capital Meets Digital Intelligence</h1>
-    <p>We transform Africa's infrastructure landscape by embedding real-time monitoring, predictive analytics, and transparent reporting into every project we fund.</p>
+    <h1 class="hero-heading">Where Strategic Capital Meets Digital Intelligence</h1>
+    <p class="hero-subtitle">We transform Africa's infrastructure landscape by embedding real-time monitoring, predictive analytics, and transparent reporting into every project we fund.</p>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-arrow"></div>
+      <span>Explore Platform</span>
+    </div>
   </div>
 </section>
 
@@ -66,19 +122,19 @@
     
     <div class="intro-stats">
       <div class="stat-item">
-        <div class="stat-icon"><img src="images/monitoring.png" alt=""></div>
+        <div class="stat-icon"><img loading="lazy" decoding="async" src="images/monitoring.webp" alt=""></div>
         <div class="stat-value">Real-Time</div>
         <div class="stat-label">Project Monitoring</div>
       </div>
       
       <div class="stat-item">
-        <div class="stat-icon"><img src="images/prediction.png"  alt=""></div>
+        <div class="stat-icon"><img loading="lazy" decoding="async" src="images/prediction.webp"  alt=""></div>
         <div class="stat-value">AI-Driven</div>
         <div class="stat-label">Predictive Analytics</div>
       </div>
       
       <div class="stat-item">
-        <div class="stat-icon"><img src="images/auditor.png" alt=""></div>
+        <div class="stat-icon"><img loading="lazy" decoding="async" src="images/auditor.webp" alt=""></div>
         <div class="stat-value">Verified</div>
         <div class="stat-label">Impact Reporting</div>
       </div>
@@ -88,14 +144,15 @@
 
 <!-- MISSION & VISION -->
 <section class="mission-vision">
+  <h2 class="visually-hidden">Mission &amp; Vision</h2>
   <div class="mission-vision-grid">
 
-    <div class="mission-card" style="background-image: url('images/Mission.png');">
+    <div class="mission-card">
       <h3>Mission</h3>
       <p>To accelerate sustainable infrastructure development across Africa by integrating institutional-grade capital with advanced digital intelligence systems, creating measurable value for investors, partners.</p>
     </div>
 
-    <div class="vision-card" style="background-image: url('images/Vision.png');">
+    <div class="vision-card">
       <h3>Vision</h3>
       <p>To establish the benchmark for transparent, data-driven infrastructure investment in Africa, where every project operates with full operational visibility  from development through maturity.</p>
     </div>
@@ -113,7 +170,7 @@
   <div class="lifecycle-timeline">
     <div class="timeline-item">
       <div class="timeline-marker">
-        <div class="marker-icon"><img src="images/resource-allocation.png" alt=""></div>
+        <div class="marker-icon"><img loading="lazy" decoding="async" src="images/resource-allocation.webp" alt=""></div>
       </div>
       <div class="timeline-content">
         <h3>Strategic Capital Deployment</h3>
@@ -123,7 +180,7 @@
     
     <div class="timeline-item">
       <div class="timeline-marker">
-        <div class="marker-icon"><img src="images/technology.png" alt=""></div>
+        <div class="marker-icon"><img loading="lazy" decoding="async" src="images/technology.webp" alt=""></div>
       </div>
       <div class="timeline-content">
         <h3>Technology Integration</h3>
@@ -133,7 +190,7 @@
     
     <div class="timeline-item">
       <div class="timeline-marker">
-        <div class="marker-icon"><img src="images/dashboard.png" alt=""></div>
+        <div class="marker-icon"><img loading="lazy" decoding="async" src="images/dashboard.webp" alt=""></div>
       </div>
       <div class="timeline-content">
         <h3>Real-Time Operational Monitoring</h3>
@@ -143,7 +200,7 @@
     
     <div class="timeline-item">
       <div class="timeline-marker">
-        <div class="marker-icon"><img src="images/curve.png" alt=""></div>
+        <div class="marker-icon"><img loading="lazy" decoding="async" src="images/curve.webp" alt=""></div>
       </div>
       <div class="timeline-content">
         <h3>Predictive Intelligence</h3>
@@ -153,7 +210,7 @@
     
     <div class="timeline-item">
       <div class="timeline-marker">
-        <div class="marker-icon"><img src="images/transparency2.png" alt=""></div>
+        <div class="marker-icon"><img loading="lazy" decoding="async" src="images/transparency2.webp" alt=""></div>
       </div>
       <div class="timeline-content">
         <h3>Transparent Impact Reporting</h3>
@@ -173,42 +230,42 @@
   <div class="advantages-grid">
     <div class="advantage-card">
       <div class="advantage-number">01</div>
-      <div class="advantage-icon"><img src="images/big-data.png" alt=""></div>
+      <div class="advantage-icon"><img loading="lazy" decoding="async" src="images/big-data.webp" alt=""></div>
       <h3>Capital + Technology Integration</h3>
       <p>We don't separate funding from operational intelligence. Every investment includes embedded digital systems—creating infrastructure that is monitored, analyzed, and optimized from day one.</p>
     </div>
     
     <div class="advantage-card">
       <div class="advantage-number">02</div>
-      <div class="advantage-icon"><img src="images/transparency2.png" alt=""></div>
+      <div class="advantage-icon"><img loading="lazy" decoding="async" src="images/transparency2.webp" alt=""></div>
       <h3>Continuous Operational Visibility</h3>
       <p>Investors and operators access live performance dashboards, real-time alerts, and verified metrics. No more waiting for quarterly reports—stakeholders see actual project status at any moment.</p>
     </div>
     
     <div class="advantage-card">
       <div class="advantage-number">03</div>
-      <div class="advantage-icon"><img src="images/self-confidence.png" alt=""></div>
+      <div class="advantage-icon"><img loading="lazy" decoding="async" src="images/self-confidence.webp" alt=""></div>
       <h3>Investment De-Risking</h3>
       <p>Data transparency reduces uncertainty. Predictive analytics catch issues before they become failures. Verified performance metrics support confident capital allocation and attract institutional investors previously deterred by opacity.</p>
     </div>
     
     <div class="advantage-card">
       <div class="advantage-number">04</div>
-      <div class="advantage-icon"><img src="images/efficacy.png" alt=""></div>
+      <div class="advantage-icon"><img loading="lazy" decoding="async" src="images/efficacy.webp" alt=""></div>
       <h3>Operational Efficiency Gains</h3>
       <p>Digital monitoring and predictive maintenance reduce downtime, extend asset life, and optimize resource use. Projects operate more efficiently, deliver better returns, and maintain higher service quality over time.</p>
     </div>
     
     <div class="advantage-card">
       <div class="advantage-number">05</div>
-      <div class="advantage-icon"><img src="images/africa.png" alt=""></div>
+      <div class="advantage-icon"><img loading="lazy" decoding="async" src="images/africa.webp" alt=""></div>
       <h3>Africa-Focused Expertise</h3>
       <p>We understand African infrastructure realities—regulatory environments, local partnerships, operational challenges, and market dynamics. Our solutions are designed for the continent's specific conditions and opportunities.</p>
     </div>
     
     <div class="advantage-card">
       <div class="advantage-number">06</div>
-      <div class="advantage-icon"><img src="images/scalability.png" alt=""></div>
+      <div class="advantage-icon"><img loading="lazy" decoding="async" src="images/scalability.webp" alt=""></div>
       <h3>Scalable Technology Platform</h3>
       <p>Our integrated digital infrastructure scales across projects and sectors, enabling cross-portfolio insights, standardized reporting, and reduced implementation costs as we expand our investment footprint across Africa.</p>
     </div>
@@ -284,25 +341,25 @@
     
     <div class="matters-grid">
       <div class="matter-item">
-        <div class="matter-icon"><img src="images/Unlocking Institutional Capital.png" alt=""></div>
+        <div class="matter-icon"><img loading="lazy" decoding="async" src="images/Unlocking Institutional Capital.webp" alt=""></div>
         <h3>Unlocking Institutional Capital</h3>
         <p>Africa needs $130-170 billion annually for infrastructure. Data opacity keeps institutional investors sidelined. We eliminate this barrier with verified, real-time intelligence that meets institutional risk management standards.</p>
       </div>
       
       <div class="matter-item">
-        <div class="matter-icon"><img src="images/Establishing Accountability.png" alt=""></div>
+        <div class="matter-icon"><img loading="lazy" decoding="async" src="images/Establishing Accountability.webp" alt=""></div>
         <h3>Establishing Accountability</h3>
         <p>Transparent infrastructure operations build public trust, attract development partners, and create sustainable project ecosystems. Digital oversight ensures promises made during development are kept through operations.</p>
       </div>
       
       <div class="matter-item">
-        <div class="matter-icon"><img src="images/Maximizing Performance.png" alt=""></div>
+        <div class="matter-icon"><img loading="lazy" decoding="async" src="images/Maximizing Performance.webp" alt=""></div>
         <h3>Maximizing Performance</h3>
         <p>African infrastructure must operate efficiently to justify continued investment. Predictive maintenance, optimized operations, and data-driven management extend asset life and improve service delivery.</p>
       </div>
       
       <div class="matter-item">
-        <div class="matter-icon"><img src="images/Delivering Community Impact.png" alt=""></div>
+        <div class="matter-icon"><img loading="lazy" decoding="async" src="images/Delivering Community Impact.webp" alt=""></div>
         <h3>Delivering Community Impact</h3>
         <p>Better infrastructure creates economic opportunities, improves public services, and supports development goals. Digital intelligence ensures projects deliver measurable social and environmental benefits.</p>
       </div>
@@ -335,23 +392,43 @@
       </div>
       
       <div class="cta-actions">
-        <a href="contact.html" class="btn-primary">Explore Partnership Opportunities</a>
-        <a href="solutions.html" class="btn-secondary">View Our Solutions</a>
+        <a href="contact.html" class="btn btn-primary">Explore Partnership Opportunities</a>
+        <a href="solutions.html" class="btn btn-secondary">View Our Solutions</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-content">
-    <img src="images/navy logo.png" alt="Capital Innovation Fund">
-    <div class="social">
-      <img src="images/social.png" alt="Social Media">
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-simple">
+      <div class="footer-brand">
+        <img loading="lazy" decoding="async" src="images/white logo.webp" alt="Capital Innovation Fund" class="footer-logo">
+        <p class="footer-tagline">Transforming Africa's infrastructure landscape through strategic capital deployment and operational excellence.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-links-title">Quick Links</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <div class="footer-links-title">Contact</div>
+        <p>3rd Floor, 7 West Quay Road<br>V&amp;A Waterfront, Cape Town 8001</p>
+        <p><a href="tel:+27110841100">+27 11 084 1100</a></p>
+        <p><a href="mailto:info@capitalinnovation.fund">info@capitalinnovation.fund</a></p>
+      </div>
     </div>
   </div>
 </footer>
 
-<script src="js/about.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="site">
 <head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K5F7ED028S"></script>
@@ -13,23 +13,74 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Solutions - Capital Innovation Fund</title>
-<link rel="stylesheet" href="css/solutions.css">
+<meta name="description" content="Explore Capital Innovation Fund's intelligence pipeline — from IoT data capture through AI analytics to real-time investor dashboards — powering transparent African infrastructure investment.">
+<meta name="keywords" content="infrastructure intelligence pipeline, IoT sensors Africa, AI analytics infrastructure, blockchain infrastructure investment, cloud dashboards Africa">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Capital Innovation Fund">
+<meta property="og:title" content="Solutions - Capital Innovation Fund">
+<meta property="og:description" content="Where capital meets digital intelligence — transforming African infrastructure through integrated funding and real-time operational oversight.">
+<meta property="og:url" content="https://capitalinnovationfund.co.za/solutions.html">
+<link rel="canonical" href="https://capitalinnovationfund.co.za/solutions.html">
+<meta property="og:image" content="https://capitalinnovationfund.co.za/images/dashboard.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Capital Innovation Fund",
+  "url": "https://capitalinnovationfund.co.za/solutions.html",
+  "logo": "https://capitalinnovationfund.co.za/images/logo.webp",
+  "description": "Infrastructure intelligence platform combining institutional capital with real-time monitoring across Africa's energy, water, logistics, agriculture and gas sectors.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3rd Floor, 7 West Quay Road, V&A Waterfront",
+    "addressLocality": "Cape Town",
+    "postalCode": "8001",
+    "addressCountry": "ZA"
+  },
+  "telephone": "+27110841100",
+  "email": "info@capitalinnovation.fund"
+}
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/site.css">
 </head>
-<body>
+<body class="site-body">
 
 <!-- NAVIGATION -->
-<nav id="mainNav">
+<nav id="main_nav" class="site-nav">
   <div class="logo">
-    <img src="images/white logo.png" alt="Capital Innovation Fund">
+    <img src="images/white logo.webp" alt="Capital Innovation Fund">
   </div>
 
-  <ul>
+  <!-- Desktop Menu — only visible on ≥969px via CSS -->
+  <ul class="desktop-menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="solutions.html" class="active">Solutions</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
+
+  <!-- Mobile Menu Toggle — only visible on ≤968px via CSS -->
+  <button class="mobile-menu-toggle" aria-label="Toggle menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
 </nav>
+
+<!-- Mobile Sidebar — rendered outside nav, controlled via JS -->
+<div class="mobile-sidebar">
+  <div class="sidebar-overlay"></div>
+  <div class="sidebar-content">
+    <button class="sidebar-close" aria-label="Close menu">&times;</button>
+    <ul class="sidebar-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="solutions.html" class="active">Solutions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
 
 <!-- FULLSCREEN HERO WITH ANIMATED BACKGROUND -->
 <section class="solutions-hero-immersive">
@@ -44,10 +95,10 @@
     </div>
   </div>
   
-  <div class="hero-content-center">
+  <div class="hero-content">
     <div class="hero-badge">Infrastructure Intelligence Platform</div>
-    <h1>Where Capital Meets<br>Digital Intelligence</h1>
-    <p>Transforming African infrastructure through integrated funding and real-time operational oversight</p>
+    <h1 class="hero-heading">Where Capital Meets<br>Digital Intelligence</h1>
+    <p class="hero-subtitle">Transforming African infrastructure through integrated funding and real-time operational oversight</p>
     
     <div class="hero-scroll-indicator">
       <div class="scroll-arrow"></div>
@@ -64,7 +115,7 @@
   <div class="pipeline-interactive">
     <div class="pipeline-stage" data-stage="capture">
       <div class="stage-number">01</div>
-      <div class="stage-icon"><img src="images/data-collection.png" alt=""></div>
+      <div class="stage-icon"><img loading="lazy" decoding="async" src="images/data-collection.webp" alt=""></div>
       <h3>Data Capture</h3>
       <p class="stage-brief">IoT sensors, satellite imagery, SCADA systems</p>
       
@@ -86,7 +137,7 @@
     
     <div class="pipeline-stage" data-stage="ingestion">
       <div class="stage-number">02</div>
-            <div class="stage-icon"><img src="images/cloud-computing.png" alt=""></div>
+            <div class="stage-icon"><img loading="lazy" decoding="async" src="images/cloud-computing.webp" alt=""></div>
       <h3>Data Ingestion</h3>
       <p class="stage-brief">Validation, normalization, storage</p>
       
@@ -108,7 +159,7 @@
     
     <div class="pipeline-stage" data-stage="analytics">
       <div class="stage-number">03</div>
-            <div class="stage-icon"><img src="images/ai-search.png" alt=""></div>
+            <div class="stage-icon"><img loading="lazy" decoding="async" src="images/ai-search.webp" alt=""></div>
       <h3>AI Analytics</h3>
       <p class="stage-brief">Pattern detection, forecasting</p>
       
@@ -130,7 +181,7 @@
     
     <div class="pipeline-stage" data-stage="risk">
       <div class="stage-number">04</div>
-            <div class="stage-icon"><img src="images/acceptable-risk.png" alt=""></div>
+            <div class="stage-icon"><img loading="lazy" decoding="async" src="images/acceptable-risk.webp" alt=""></div>
       <h3>Risk Scoring</h3>
       <p class="stage-brief">Automated alerts, tracking</p>
       
@@ -152,7 +203,7 @@
     
     <div class="pipeline-stage" data-stage="interface">
       <div class="stage-number">05</div>
-      <div class="stage-icon"><img src="images/network.png" alt=""></div>
+      <div class="stage-icon"><img loading="lazy" decoding="async" src="images/network.webp" alt=""></div>
       <h3>Stakeholder Interface</h3>
       <p class="stage-brief">Live dashboards, reporting</p>
       
@@ -182,11 +233,11 @@
   <div class="layers-container">
     <div class="tech-layer" data-layer="iot">
       <div class="layer-visual">
-        <img src="images/iot-sensors.png" alt="IoT Sensors">
+        <img loading="lazy" decoding="async" src="images/iot-sensors.webp" alt="IoT Sensors">
         <div class="visual-label">Hardware Layer</div>
       </div>
       <div class="layer-content">
-        <div class="layer-icon"><img src="images/technology.png" alt=""></div>
+        <div class="layer-icon"><img loading="lazy" decoding="async" src="images/technology.webp" alt=""></div>
         <h3>IoT Sensors</h3>
         <p class="layer-description">Real-time monitoring across energy, water, and agriculture infrastructure for continuous performance tracking.</p>
         
@@ -204,11 +255,11 @@
     
     <div class="tech-layer" data-layer="ai">
       <div class="layer-visual">
-        <img src="images/ai-analysis.png" alt="AI Analytics">
+        <img loading="lazy" decoding="async" src="images/ai-analysis.webp" alt="AI Analytics">
         <div class="visual-label">Intelligence Layer</div>
       </div>
       <div class="layer-content">
-        <div class="layer-icon"><img src="images/microchip.png" alt=""></div>
+        <div class="layer-icon"><img loading="lazy" decoding="async" src="images/microchip.webp" alt=""></div>
         <h3>AI & Machine Learning</h3>
         <p class="layer-description">Predictive analytics improve maintenance planning and operational performance with data-driven insights.</p>
         
@@ -226,11 +277,11 @@
     
     <div class="tech-layer" data-layer="blockchain">
       <div class="layer-visual">
-        <img src="images/blockchain-pic.png" alt="Blockchain">
+        <img loading="lazy" decoding="async" src="images/blockchain-pic.webp" alt="Blockchain">
         <div class="visual-label">Trust Layer</div>
       </div>
       <div class="layer-content">
-        <div class="layer-icon"><img src="images/blockchain2.png" alt=""></div>
+        <div class="layer-icon"><img loading="lazy" decoding="async" src="images/blockchain2.webp" alt=""></div>
         <h3>Blockchain Technology</h3>
         <p class="layer-description">Secure and transparent tracking of assets, contracts, and digital transactions across all stakeholders.</p>
         
@@ -248,11 +299,11 @@
     
     <div class="tech-layer" data-layer="cloud">
       <div class="layer-visual">
-        <img src="images/cloud-platform.png" alt="Cloud Platform">
+        <img loading="lazy" decoding="async" src="images/cloud-platform.webp" alt="Cloud Platform">
         <div class="visual-label">Platform Layer</div>
       </div>
       <div class="layer-content">
-        <div class="layer-icon"><img src="images/cloud2.png" alt=""></div>
+        <div class="layer-icon"><img loading="lazy" decoding="async" src="images/cloud2.webp" alt=""></div>
         <h3>Cloud Dashboards</h3>
         <p class="layer-description">Centralized, accessible project data for all stakeholders with real-time updates and reporting.</p>
         
@@ -278,7 +329,7 @@
   <div class="hex-grid">
     <div class="hex-item">
       <div class="hex-shape">
-        <div class="hex-icon"><img src="images/dashboard.png" alt=""></div>
+        <div class="hex-icon"><img loading="lazy" decoding="async" src="images/dashboard.webp" alt=""></div>
       </div>
       <div class="hex-content">
         <h3>Digital Visibility</h3>
@@ -288,7 +339,7 @@
     
     <div class="hex-item">
       <div class="hex-shape">
-        <div class="hex-icon"><img src="images/risk-management.png" alt=""></div>
+        <div class="hex-icon"><img loading="lazy" decoding="async" src="images/risk-management.webp" alt=""></div>
       </div>
       <div class="hex-content">
         <h3>De-risking Projects</h3>
@@ -298,7 +349,7 @@
     
     <div class="hex-item">
       <div class="hex-shape">
-        <div class="hex-icon"><img src="images/efficacy.png" alt=""></div>
+        <div class="hex-icon"><img loading="lazy" decoding="async" src="images/efficacy.webp" alt=""></div>
       </div>
       <div class="hex-content">
         <h3>Operational Efficiency</h3>
@@ -308,7 +359,7 @@
     
     <div class="hex-item">
       <div class="hex-shape">
-        <div class="hex-icon"><img src="images/africa.png" alt=""></div>
+        <div class="hex-icon"><img loading="lazy" decoding="async" src="images/africa.webp" alt=""></div>
       </div>
       <div class="hex-content">
         <h3>Local Focus</h3>
@@ -329,13 +380,13 @@
         <div class="flip-card-front">
           <div class="card-label">Reporting</div>
           <h3>Traditional Approach</h3>
-          <div class="approach-icon traditional"><img src="images/report.png" alt=""></div>
+          <div class="approach-icon traditional"><img loading="lazy" decoding="async" src="images/report.webp" alt=""></div>
           <p>Manual quarterly reports with 4-12 week delays</p>
         </div>
         <div class="flip-card-back">
           <div class="card-label">Reporting</div>
           <h3>Platform Approach</h3>
-                    <div class="approach-icon traditional"><img src="images/report.png" alt=""></div>
+                    <div class="approach-icon traditional"><img loading="lazy" decoding="async" src="images/report.webp" alt=""></div>
 
           <p>Real-time dashboards with continuous data streams and instant stakeholder access</p>
         </div>
@@ -347,13 +398,13 @@
         <div class="flip-card-front">
           <div class="card-label">Maintenance</div>
           <h3>Traditional Approach</h3>
-          <div class="approach-icon traditional"><img src="images/rpa.png" alt=""></div>
+          <div class="approach-icon traditional"><img loading="lazy" decoding="async" src="images/rpa.webp" alt=""></div>
           <p>Reactive repairs after equipment failure</p>
         </div>
         <div class="flip-card-back">
           <div class="card-label">Maintenance</div>
           <h3>Platform Approach</h3>
-          <div class="approach-icon traditional"><img src="images/rpa.png" alt=""></div>
+          <div class="approach-icon traditional"><img loading="lazy" decoding="async" src="images/rpa.webp" alt=""></div>
           <p>Predictive AI forecasts maintenance needs weeks in advance, scheduling optimal intervention windows</p>
         </div>
       </div>
@@ -364,13 +415,13 @@
         <div class="flip-card-front">
           <div class="card-label">Transparency</div>
           <h3>Traditional Approach</h3>
-          <div class="approach-icon traditional"><img src="images/transparency2.png" alt=""></div>
+          <div class="approach-icon traditional"><img loading="lazy" decoding="async" src="images/transparency2.webp" alt=""></div>
           <p>Limited access to aggregated summaries</p>
         </div>
         <div class="flip-card-back">
           <div class="card-label">Transparency</div>
           <h3>Platform Approach</h3>
-          <div class="approach-icon traditional"><img src="images/transparency2.png" alt=""></div>
+          <div class="approach-icon traditional"><img loading="lazy" decoding="async" src="images/transparency2.webp" alt=""></div>
           <p>Complete visibility into granular operational metrics with full audit trails and verified performance data</p>
         </div>
       </div>
@@ -381,13 +432,13 @@
         <div class="flip-card-front">
           <div class="card-label">Decision Speed</div>
           <h3>Traditional Approach</h3>
-          <div class="approach-icon traditional"><img src="images/quick.png" alt=""></div>
+          <div class="approach-icon traditional"><img loading="lazy" decoding="async" src="images/quick.webp" alt=""></div>
           <p>Lengthy due diligence with manual verification</p>
         </div>
         <div class="flip-card-back">
           <div class="card-label">Decision Speed</div>
           <h3>Platform Approach</h3>
-          <div class="approach-icon platform"><img src="images/quick.png" alt=""></div>
+          <div class="approach-icon platform"><img loading="lazy" decoding="async" src="images/quick.webp" alt=""></div>
           <p>Pre-integrated monitoring enables faster capital deployment based on real-time validated data</p>
         </div>
       </div>
@@ -402,22 +453,42 @@
     <p>Discover how integrated intelligence creates institutional-grade transparency and operational confidence</p>
     
     <div class="cta-buttons">
-      <a href="contact.html" class="btn-primary">Schedule Platform Demo</a>
-      <a href="about.html" class="btn-secondary">Learn Our Approach</a>
+      <a href="contact.html" class="btn btn-primary">Schedule Platform Demo</a>
+      <a href="about.html" class="btn btn-secondary">Learn Our Approach</a>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-content">
-    <img src="images/navy logo.png" alt="Capital Innovation Fund">
-    <div class="social">
-      <img src="images/social.png" alt="Social Media">
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-simple">
+      <div class="footer-brand">
+        <img loading="lazy" decoding="async" src="images/white logo.webp" alt="Capital Innovation Fund" class="footer-logo">
+        <p class="footer-tagline">Transforming Africa's infrastructure landscape through strategic capital deployment and operational excellence.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-links-title">Quick Links</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <div class="footer-links-title">Contact</div>
+        <p>3rd Floor, 7 West Quay Road<br>V&amp;A Waterfront, Cape Town 8001</p>
+        <p><a href="tel:+27110841100">+27 11 084 1100</a></p>
+        <p><a href="mailto:info@capitalinnovation.fund">info@capitalinnovation.fund</a></p>
+      </div>
     </div>
   </div>
 </footer>
 
-<script src="js/solutions.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>
