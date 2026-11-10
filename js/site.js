@@ -726,7 +726,7 @@ function initFormSubmission() {
     const message = document.getElementById('message').value;
     
     // Compose email
-    const recipientEmail = 'info@capitalinnovation.fund';
+    const recipientEmail = 'info@capitalinnovationfund.com';
     const subject = `Strategic Inquiry from ${fullName} - ${company}`;
     
     const body = `
